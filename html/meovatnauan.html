@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Ẩm Thực</title>
+    <style>
+        /* CSS styling */
+        .login-form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .login-form form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        .login-form button {
+            padding: 10px 20px;
+        }
+        .tip-container {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+      // JavaScript code
+      function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Kiểm tra thông tin đăng nhập
+            if (username === "admin" && password === "123456") {
+                alert("Đăng nhập thành công!");
+            } else {
+                alert("Tên đăng nhập hoặc mật khẩu không chính xác!");
+            }
+        }
+        function placeOrder() {
+            // Lấy thông tin từ người dùng
+            var itemName = document.getElementById("item-name").value;
+            var quantity = document.getElementById("quantity").value;
+            var address = document.getElementById("address").value;
+
+            alert("Bạn đã đặt hàng " + quantity + " " + itemName + " thành công tại địa chỉ: " + address);
+            
+            // Reset form
+            document.getElementById("item-name").value = "";
+            document.getElementById("quantity").value = "";
+            document.getElementById("address").value = "";
+        }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><p><a href="trangchu.html"> Trang Chủ </a></p></li>
+                <li><p><a href="thongtin.html"> Thông Tin</a></p></li>
+                <li><p><a href="dangnhapthanhvien.html"> Đăng nhập</a></p></li>
+              </ul>
+        </nav>
+    </header>
+
+    <!-- Trang chủ -->
+    <section>
+        <h2>Chào mừng đến với trang wb ẩm thực châu á</h2>
+        <p>Trang web này cung cấp thônge tin về món ăn ngon của châu á, địa điểm và công thức nấu ăn.</p>
+    </section>
+
+    <!-- Món ăn -->
+    <section id="monan" style="display: none;">
+        <h1>Món ăn</h1>
+        <h2>1. Phở</h2>
+        <p>Việt Nam từ lâu đã nổi tiếng với món phở truyền thống. Đây là món ăn được nấu rất công phu với phần nước dùng được hầm từ xương bò, quế, hồi,… trong 6-8 tiếng, nhờ đó mà nước dùng sẽ ngọt thanh tự nhiên. Sự kết hợp với bánh phở mềm, rau tươi ngon cũng mang đến một món ăn phù hợp với mọi lứa tuổi
+            Phở là món ăn Việt được nhiều báo chí nước ngoài ca ngợi, mỗi ngày ở Việt Nam có hàng triệu bát phở được phục vụ. Đây được xem là món ăn nổi tiếng và hấp dẫn nhất nền ẩm thực Việt Nam trong mắt của nhiều du khách quốc tế.</p>
+        <p>Gợi ý một số quán phở ngon:</p>
+        <ul>
+            <li><p>Phở Thìn: 13 Lò Đúc, Phường Phạm Đình Hổ, Quận Hai Bà Trưng, Hà Nội</p></li>
+            <li><p>Phở Bát Đàn: 49 Bát Đàn, Phường Cửa Đông, Quận Hoàn Kiếm, Hà Nội</p></li>
+            </ul>
+        <h2>2. Gỏi cuốn</h2>
+        <p>Gỏi cuốn hiện là món ăn nhẹ nhàng rất hoàn hảo và có mùi vị đậm đà của Việt Nam với các thành phần đơn giản như: miến, bún, tôm, thịt heo và rau xanh, tất cả sẽ được cuốn lại bên trong một lớp bánh tráng mỏng dai sao cho vừa miệng ăn.
+            các món ăn việt namMón gỏi cuốn có mùi vị gây thương nhớ (Nguồn: Sưu tầm)
+            Gỏi cuốn được chấm với mắm nêm hoặc nước mắm tùy thuộc vào khẩu vị của người ăn. Chỉ cần thay đổi nước chấm ăn kèm thôi là bạn đã có được món ăn với 2 hương vị hoàn toàn khác nhau</p>
+        <p>Gợi ý một số quán gỏi cuốn ngon:</p>
+        <ul>
+            <li><p>Gỏi Cuốn Bà Dzú: 26/26 Đỗ Quang Đẩu, Phường Phạm Ngũ Lão, Quận 1, Hồ Chí Minh</p></li>
+            <li><p>Gỏi cuốn Phùng Hưng: 11 Phùng Hưng, Hàng Mã, Hoàn Kiếm, Hà Nội</p></li>
+            </ul>
+        <h2>3. Bún chả</h2>
+        <p>Bún chả là món ăn đặc trưng của thủ đô Hà Nội. Nhờ vào hương vị thơm ngon khó quê, bún chả dần du nhập vào các tỉnh thành ở khắp Việt Nam. Món ăn là sự kết hợp của thịt lớn nướng, bún gạo, nước mắm và rất nhiều loại gia vị ăn kèm khác như rau thơm…
+            Bún chả nổi tiếng đến mức tổng thống Obama lựa chọn món ăn này để thưởng thức khi ghé thăm Việt Nam. Do đó, không lạ gì khi món ăn này góp mặt trong top những món ăn nổi tiếng.</p>
+        <p>Gợi ý mốt số quán bún chả tại Hà Nội:</p>
+        <ul>
+            <li><p>Bún chả Sinh Từ: 316 Phố Vọng, Quận Hai Bà Trưng, Hà Nội</p></li>
+            <li><p>Bún chả Hàng Quạt: Ngõ 74, Hàng Quạt, Quận Hoàn Kiếm, Hà Nội</p></li>
+            </ul>
+        <h2>4. Cơm tấm</h2>
+        <p>Cơm tấm là bữa cơm trưa vô cùng phổ biến ở Sài Gòn, không những bán phổ biến vào buổi trưa mà còn cả sáng và tối. Với đĩa cơm tấm ăn kèm với thịt lợn hoặc sườn lợn nướng, thêm bì chả mỡ hành, ăn kèm cùng dưa muối chua và một số loại rau gia vị đã giúp cho món ăn thơm ngon khó cưỡng.
+            Món ăn này phổ biến đến mức được bán ở khắp các hàng quán ở Việt Nam từ lề đường cho đến nhà hàng sang trọng đều có một công thức cơm tấm mang đến hương vị riêng
+        </p>
+        <p>Gợi ý một số quán cơm tấm ngon:</p>
+        <ul>
+            <li><p>Cơm sườn Ba Cường: 263 Trần Quang Khải, Phường Tân Định, Quận 1, Minh</p></li>
+            <li><p>Bếp cơm tấm: 292 Thái Hà, Quận Đống Đa, Hà Nội</p></li>
+            </ul>
+        <h2>5. Bún bò Huế</h2>
+        <p>Danh sách những món ăn ngon nhất Việt Nam không thể quên kể đến món Bún Bò Huế, món này sở hữu hương vị vô cùng hài hòa, có vị cay, chua, mặn và ngọt tất cả hòa quyện vào với đã ra được một món ăn vô cùng tuyệt vời. Nước dùng được làm từ xương bò ninh với nước mắm và sả.
+           Bát bún được phục vụ với thịt lợn, thịt bò, sợi bún to và dày hơn rất nhiều của bún miền Bắc, ăn kèm với nhiều loại rau mùi. Đặc biệt người dân ở Huế rất thích ăn cay vì vật ớt và tiêu là 2 thứ không thể thiếu để làm cho hương vị trở nên đặc biệt hơn rất nhiều. 
+        </p>
+        <p>Gợi ý một số quán bún bò ngon:</p>
+        <ul>
+            <li><p>O Phụng Chú Vọng: 14 Nguyễn Du, Phú Cát, Thành phố Huế, Thừa Thiên Huế</p></li>
+            <li><p>O Cương Chú Điệp: 6 Trần Thúc Nhẫn, Vĩnh Ninh, thành phố Huế, Thừa Thiên Huế
+            </p></li>
+            </ul>
+    </section>
+
+    <!-- Địa điểm -->
+    <section id="diadiem" style="display: none;">
+        <h1>Địa điểm</h1>
+        <form>
+            <label for="location-name">Tên địa điểm:</label>
+            <input type="text" id="location-name">
+
+            <label for="location-address">Địa chỉ:</label>
+            <input type="text" id="location-address">
+
+            <button type="submit">Tạo</button>
+        </form>
+    </section>
+
+    <!-- Mẹo vặt nấu ăn -->
+    <section id="meovat" style="display: none;">
+        <h1>Mẹo vặt nấu ăn</h1>
+            <!-- Mẹo vặt 1 -->
+    <div class="tip-container">
+        <h3>Mẹo vặt 1: Cách chọn rau quả tươi ngon</h3>
+        <p>Luôn lựa chọn rau quả có màu sắc tươi sáng, không có vết thâm, mục, hoặc trái bị móp.</p>
+    </div>
+
+    <!-- Mẹo vặt 2 -->
+    <div class="tip-container">
+        <h3>Mẹo vặt 2: Cách giữ thức ăn lâu hơn trong tủ lạnh</h3>
+        <p>Đặt thức ăn trong túi chống thấm hoặc hủy đông, sau đó bỏ vào tủ lạnh để giữ cho thực phẩm tươi mới hơn.</p>
+    </div>
+    <div class="tip-container">
+        <h3>Mẹo vặt 3: Nêm muối đúng cách</h3>
+        <p>Đối với các món ăn có các loại củ nên cho muối vào sớm hơn để muối ngâm đều vào củ còn đối với món rau luộc thì chỉ nên nêm muối trước khi bắc nồi xuống tránh cho việc các chất dinh dưỡng trong rau mất đi </p>
+    </div>
+    <div class="tip-container">
+        <h3>Mẹo vặt 4: Dùng thêm nước khi làm món chiên</h3>
+        <p>Khi xào rau hay món ăn thường bị khô đồng thời hàm lượng nước dinh dưỡng có trong rau hay bị bay hơi mất vì thế để giữ lại độ dinh dưỡng cho rau, khi chảo nóng bạn nên cho thêm 2-3 thìa canh nước để hơi nước nống có thể làm rau chín tới mà không tiêu hao quá nhiều lượng nước ngọt có trong thành phần của rau, củ</p>
+    </div>
+    <div class="tip-container">
+        <h3>Mẹo vặt 5: Để tăng hương vị cho món ăn</h3>
+        <p>Để món ăn có hương vị hấp dẫn hơn, bạn nên rang các loại hạt gia vị như hạt tiêu đen, hạt thì là... rồi dùng cối giã nhuyễn cho vào món ăn.</p>
+    </div>
+    </section>
+
+    <!-- Đặt hàng -->
+    <section id="dathang" style="display: none;">
+        <h1>Đặt hàng món ăn</h1>
+        <form>
+            <div>
+                <label for="item-name">Tên món ăn:</label>
+                <input type="text" id="item-name" required>
+            </div>
+            <div>
+                <label for="quantity">Số lượng:</label>
+                <input type="number" id="quantity" required>
+            </div>
+            <div>
+                <label for="address">Địa chỉ giao hàng:</label>
+                <input type="text" id="address" required>
+            </div>
+            <div>
+                <button type="button" onclick="placeOrder()">Đặt hàng</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Đăng nhập -->
+    <section id="login" style="display: none;">
+        <div class="login-form">
+            <form>
+                <h2>Đăng nhập thành viên</h2>
+                <input type="text" id="username" placeholder="Tên đăng nhập" required>
+                <input type="password" id="password" placeholder="Mật khẩu" required>
+                <button type="button" onclick="login()">Đăng nhập</button>
+            </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Website ẩm thực &copy; 2023</p>
+    </footer>
+
+    <script>
+</body>
